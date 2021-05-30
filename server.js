@@ -50,6 +50,7 @@ app.get('/api/animals', (req, res) => {
 	// console.log(req.query.name)-->returns name(Lex) for ?name=Lex in {name: Lex}
 	if (req.query) {
 		results = filterByQuery(req.query, results);
+		console.log(req.query)
 	}
 	res.json(results);
 });
